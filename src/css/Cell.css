@@ -1,0 +1,11 @@
+.component-cell {
+    width: 30px;
+    height: 30px;
+    background-color: lightgreen;
+    border-radius: 50%;
+
+}
+
+.component-cell:hover{
+    background: darkgreen;
+}

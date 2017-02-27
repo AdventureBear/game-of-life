@@ -1,0 +1,10 @@
+.component-board {
+    background-color: #fdefde;
+    color: #321321;
+
+    display:block;
+}
+
+table {
+    margin: 0 auto;
+}
