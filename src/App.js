@@ -9,7 +9,9 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state={
-      generation: 0
+      generation: 0,
+      rows: 10,
+      cols: 10
     }
   }
   render() {
@@ -20,8 +22,8 @@ class App extends Component {
           <h2>Game of Life</h2>
         </div>
         <p className="App-intro">
-          <ControlPanel generation = {this.state.generation} />
-          <Board />
+          <ControlPanel generation={this.state.generation} />
+          <Board numRows={this.state.rows} numCols={this.state.cols}/>
           <Options />
         </p>
       </div>

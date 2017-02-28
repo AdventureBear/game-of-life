@@ -3,24 +3,16 @@ import Row from './Row'
 import './css/Board.css'
 
 class Board extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      rows: 10,
-      cols: 10
-    }
-  }
 
   render () {
-
     let fullBoard = []
-
-    for (var i = 0; i < this.state.rows; i++) {
-      fullBoard.push(<Row thisRow={i} numCols={this.state.cols} />)
+    for (var i = 0; i < this.props.numRows; i++) {
+      console.log("building row: " + i)
+      fullBoard.push(<Row thisRow={i} numCols={this.props.numCols} />)
     }
+
     return (
       <div className='component-board'>
-        <h1>Board</h1>
         <table>
           <tbody>
           {fullBoard}
@@ -34,7 +26,8 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  numRows: React.PropTypes.number,
+  numCols: React.PropTypes.number
 };
 
 export default Board

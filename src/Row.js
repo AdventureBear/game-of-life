@@ -3,14 +3,12 @@ import './css/Row.css'
 import Cell from './Cell'
 
 class Row extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render(){
         let Object_row=[]
         for (var i = 0; i < this.props.numCols; i++) {
-            Object_row.push(<Cell col={i} row={this.props.thisRow}/>)
+            console.log("building col: " + i)
+            Object_row.push(<Cell key={i + this.props.thisRow*10} col={i} row={this.props.thisRow}/>)
         }
         return (
             <div className='component-row'>

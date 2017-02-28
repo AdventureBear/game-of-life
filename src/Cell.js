@@ -2,9 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import './css/Cell.css'
 
 class Cell extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render(){
         return (
@@ -14,9 +11,5 @@ class Cell extends Component {
         )
     }
 }
-
-Cell.propTypes = {
-
-};
 
 export default Cell
