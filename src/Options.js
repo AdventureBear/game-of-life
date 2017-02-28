@@ -9,7 +9,18 @@ class Options extends Component {
     render(){
         return (
             <div className='component-options'>
-                <h1>Options</h1>
+                <div id='size-options'>
+                    Board Size:
+                    <button>+10</button>
+                    <button>-10</button>
+                    <button>Rest</button>
+                </div>
+                <div id='speed'>
+                    Board Size:
+                    <button>Faster</button>
+                    <button>Slower</button>
+                    <button>Step</button>
+                </div>
             </div>
         )
     }

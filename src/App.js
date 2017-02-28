@@ -6,6 +6,12 @@ import Board from './Board'
 import Options from './Options'
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      generation: 0
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -14,7 +20,7 @@ class App extends Component {
           <h2>Game of Life</h2>
         </div>
         <p className="App-intro">
-          <ControlPanel />
+          <ControlPanel generation = {this.state.generation} />
           <Board />
           <Options />
         </p>

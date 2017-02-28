@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Website
 
-Live Site @ Github Pages: [My Recipe Box](https://adventurebear.github.io/game-of-life/)
+Live Site @ Github Pages: [Conways Game of Life](https://adventurebear.github.io/game-of-life/)
 
 ## Installation
 
@@ -36,6 +36,10 @@ This project is for Free Code Camp's Data Visualization Challenge, ['Game Of Lif
 1. Hint: Here's an explanation of Conway's Game of Life from John Conway himself: https://www.youtube.com/watch?v=E8kUJL04ELA
 
 1. Hint: Here's an overview of Conway's Game of Life with rules for your reference: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+
+
+## Image Credits
+[Header Image](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 ## Follow Me
 

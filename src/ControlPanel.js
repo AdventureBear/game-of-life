@@ -9,14 +9,21 @@ class ControlPanel extends Component {
     render(){
         return (
             <div className='component-controlpanel'>
-                <h1>ControlPanel</h1>
+                <div id='controls'>
+                    <button>Run</button>
+                    <button>Pause</button>
+                    <button>Clear</button>
+                </div>
+                <div id='generation'>
+                    Generation: {this.props.generation}
+                </div>
             </div>
         )
     }
 }
 
 ControlPanel.propTypes = {
-
+    generation: React.PropTypes.number
 };
 
 export default ControlPanel
