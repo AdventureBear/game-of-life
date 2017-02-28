@@ -10,13 +10,19 @@ class Options extends Component {
                     Board Size:
                     <button>+10</button>
                     <button>-10</button>
-                    <button>Rest</button>
+                    <button>Reset</button>
                 </div>
                 <div id='speed'>
                     Game Options:
                     <button>Faster</button>
                     <button>Slower</button>
                     <button>Step</button>
+                </div>
+                <div id='speed'>
+                    Add Life:
+                    <button>Still Life</button>
+                    <button>Oscillator</button>
+                    <button>Spaceship</button>
                 </div>
             </div>
         )
