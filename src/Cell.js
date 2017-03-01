@@ -4,14 +4,14 @@ import './css/Cell.css'
 class Cell extends Component {
     renderLive() {
         return (
-          <td  onClick={this.props.toggleCell(this.props.row,this.props.col)} className='component-cell alive'>
+          <td  onClick={ () => this.props.toggleCell(this.props.row,this.props.col)} className='component-cell alive'>
               <span></span>
           </td>
         )
     }
     renderDormant () {
         return (
-          <td  onClick={this.props.toggleCell(this.props.row,this.props.col)} className='component-cell dormant'>
+          <td  onClick={ () => this.props.toggleCell(this.props.row,this.props.col)} className='component-cell dormant'>
               <span></span>
           </td>
         )
