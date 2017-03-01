@@ -9,6 +9,7 @@ class ControlPanel extends Component {
                 <div id='controls'>
                     <button>Run</button>
                     <button>Pause</button>
+                    <button onClick={this.props.nextGen}>Step</button>
                     <button onClick={this.props.clearBoard}>Clear</button>
                     <button onClick={this.props.randomizeStart}>Random</button>
                 </div>
@@ -23,7 +24,8 @@ class ControlPanel extends Component {
 ControlPanel.propTypes = {
     randomizeStart: React.PropTypes.func,
     clearBoard: React.PropTypes.func,
-    generation: React.PropTypes.number
+    generation: React.PropTypes.number,
+    nextGen: React.PropTypes.func
 };
 
 export default ControlPanel
