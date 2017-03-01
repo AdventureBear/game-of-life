@@ -12,7 +12,6 @@ class Board extends Component {
       Object_row = []
       for (var j= 0; j<this.props.numCols; j++) {
         Object_row.push(<Cell
-          toggleCell={this.props.toggleCell}
           key={j + i*10}
           col={j}
           row={i}
@@ -21,11 +20,12 @@ class Board extends Component {
       }
       fullBoard.push(<tr key={i}>{Object_row}</tr>)
     }
-
+// added onClick toggleCell on tbody it propagates down
     return (
       <div className='component-board'>
         <table>
-          <tbody>
+
+          <tbody onClick={this.props.toggleCell}>
             {fullBoard}
           </tbody>
         </table>
