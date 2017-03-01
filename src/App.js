@@ -51,7 +51,7 @@ class App extends Component {
   }
 
   toggleCell = (i,j) => {
-  console.log("toggle cell clicked")
+  console.log("toggle cell clicked", i, j)
   //  let arr = this.state.thisGen
   //  arr[i][j] = !arr[i][j]
   //  this.setState({
