@@ -30,7 +30,7 @@ class App extends Component {
     let arr = Array(this.state.rows).fill().map(()=>Array(this.state.cols).fill());
     for (let i=0; i<this.state.rows;i++) {
       for (let j=0; j<this.state.cols;j++){
-        arr[i][j]=((Math.random() < 0.5))
+        arr[i][j]=((Math.round(Math.random())))
       }
     }
     console.log(arr)
@@ -46,17 +46,33 @@ class App extends Component {
       }
     }
     this.setState({
-        thisGen: arr
+      thisGen: arr
     })
   }
 
-  toggleCell = (i,j) => {
-  console.log("toggle cell clicked")
-  //  let arr = this.state.thisGen
-  //  arr[i][j] = !arr[i][j]
-  //  this.setState({
-  //    thisGen: arr
-  //  })
+  toggleCell = (item, event) => {
+    // get id attr and split into col and row
+    let cellIndex = item.target.getAttribute("id").split("_"),
+        row = cellIndex[0],
+        col = cellIndex[1],
+        // copy thisGen array
+        array = this.state.thisGen;
+    // change target index to opposite value
+    array[row][col] = (array[row][col] === true) ? false : true ;
+
+    // stops bubbling to parent elements
+    event.stopPropagation();
+
+    // setState replacing old array with updated array  
+    this.setState({
+      thisGen: array
+    });
+
+    //  let arr = this.state.thisGen
+    //  arr[i][j] = !arr[i][j]
+    //  this.setState({
+    //    thisGen: arr
+    //  })
   }
 
   render() {
