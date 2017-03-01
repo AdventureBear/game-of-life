@@ -1,21 +1,30 @@
-import React, { Component, PropTypes } from 'react'
-import Row from './Row'
+import React, { Component } from 'react'
+import Cell from './Cell'
 import './css/Board.css'
 
 class Board extends Component {
 
   render () {
+    console.log(this.props.thisGen)
     let fullBoard = []
+    let Object_row = []
     for (var i = 0; i < this.props.numRows; i++) {
-      console.log("building row: " + i)
-      fullBoard.push(<Row thisRow={i} numCols={this.props.numCols} />)
+      Object_row = []
+      for (var j= 0; j<this.props.numCols; j++) {
+        Object_row.push(<Cell
+          key={j + i*10}
+          col={j}
+          row={i}
+          living={this.props.thisGen[i][j]} />)
+      }
+      fullBoard.push(<tr key={i}>{Object_row}</tr>)
     }
 
     return (
       <div className='component-board'>
         <table>
           <tbody>
-          {fullBoard}
+            {fullBoard}
           </tbody>
         </table>
       </div>
@@ -27,7 +36,9 @@ class Board extends Component {
 
 Board.propTypes = {
   numRows: React.PropTypes.number,
-  numCols: React.PropTypes.number
+  numCols: React.PropTypes.number,
+  thisGen: React.PropTypes.array,
+  living: React.PropTypes.bool
 };
 
 export default Board

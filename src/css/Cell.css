@@ -6,6 +6,13 @@
 
 }
 
+.alive {
+    background-color: darkblue;
+}
+
+.dormant {
+    background-color: lightgreen;
+}
 .component-cell:hover{
     background: darkgreen;
 }

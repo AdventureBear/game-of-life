@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import './css/ControlPanel.css'
 
 class ControlPanel extends Component {

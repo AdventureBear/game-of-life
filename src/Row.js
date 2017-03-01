@@ -1,19 +1,20 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import './css/Row.css'
 import Cell from './Cell'
 
 class Row extends Component {
 
     render(){
+        console.log("in row.js")
         let Object_row=[]
         for (var i = 0; i < this.props.numCols; i++) {
-            console.log("building col: " + i)
+            console.log("building cell: " + (i+this.props.thisRow*10) )
             Object_row.push(<Cell key={i + this.props.thisRow*10} col={i} row={this.props.thisRow}/>)
         }
         return (
-            <div className='component-row'>
+            <tr className='component-row'>
                 {Object_row}
-            </div>
+            </tr>
         )
     }
 }
