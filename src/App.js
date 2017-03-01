@@ -8,8 +8,8 @@ import Options from './Options'
 class App extends Component {
   constructor(props){
     super(props)
-    let startrows =10
-    let startcols = 10
+    let startrows =13
+    let startcols = 19
 
     let arr = Array(startrows).fill().map(()=>Array(startcols).fill());
     for (let i=0; i<startrows;i++) {
@@ -23,8 +23,11 @@ class App extends Component {
       rows: startrows,
       cols: startcols,
       thisGen: arr
+
     }
     console.log(this.state.thisGen)
+
+
   }
   randomizeStart = () => {
     let arr = Array(this.state.rows).fill().map(()=>Array(this.state.cols).fill());
@@ -61,6 +64,8 @@ class App extends Component {
   //    thisGen: arr
   //  })
   }
+
+
 
   nextGeneration = () => {
     let arr = this.state.thisGen
@@ -158,6 +163,19 @@ class App extends Component {
   }
 
 
+  runGame=()=> {
+    console.log("Clicked Run")
+    this.timerID = setInterval(
+      () => this.nextGeneration(),
+      1000
+    )
+  }
+
+  pauseGame=()=> {
+    console.log("Clicked Pause")
+    clearInterval(this.timerID)
+  }
+
   render() {
 
     return (
@@ -168,6 +186,8 @@ class App extends Component {
         </div>
         <div className="App-intro">
           <ControlPanel
+            runGame={this.runGame}
+            pauseGame={this.pauseGame}
             clearBoard={this.clearBoard}
             randomizeStart={this.randomizeStart}
             generation={this.state.generation}
