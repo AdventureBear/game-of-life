@@ -38,6 +38,26 @@ class App extends Component {
       thisGen: arr
     })
   }
+  clearBoard = () => {
+    let arr = this.state.thisGen
+    for (let i=0; i<arr.length;i++) {
+      for (let j=0; j<arr[0].length;j++){
+        arr[i][j]=false
+      }
+    }
+    this.setState({
+        thisGen: arr
+    })
+  }
+
+  toggleCell = (i,j) => {
+  console.log("toggle cell clicked")
+  //  let arr = this.state.thisGen
+  //  arr[i][j] = !arr[i][j]
+  //  this.setState({
+  //    thisGen: arr
+  //  })
+  }
 
   render() {
 
@@ -48,8 +68,17 @@ class App extends Component {
           <h2>Game of Life</h2>
         </div>
         <div className="App-intro">
-          <ControlPanel generation={this.state.generation} />
-          <Board numRows={this.state.rows} numCols={this.state.cols} thisGen={this.state.thisGen}/>
+          <ControlPanel
+            clearBoard={this.clearBoard}
+            randomizeStart={this.randomizeStart}
+            generation={this.state.generation}
+            />
+          <Board
+            numRows={this.state.rows}
+            numCols={this.state.cols}
+            thisGen={this.state.thisGen}
+            toggleCell={this.toggleCell}
+            />
           <Options />
         </div>
       </div>

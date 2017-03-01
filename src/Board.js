@@ -12,10 +12,12 @@ class Board extends Component {
       Object_row = []
       for (var j= 0; j<this.props.numCols; j++) {
         Object_row.push(<Cell
+          toggleCell={this.props.toggleCell}
           key={j + i*10}
           col={j}
           row={i}
-          living={this.props.thisGen[i][j]} />)
+          living={this.props.thisGen[i][j]}
+          />)
       }
       fullBoard.push(<tr key={i}>{Object_row}</tr>)
     }
@@ -38,7 +40,8 @@ Board.propTypes = {
   numRows: React.PropTypes.number,
   numCols: React.PropTypes.number,
   thisGen: React.PropTypes.array,
-  living: React.PropTypes.bool
+  living: React.PropTypes.bool,
+  toggleCell: React.PropTypes.func
 };
 
 export default Board

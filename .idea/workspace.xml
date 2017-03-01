@@ -4,11 +4,8 @@
     <list default="true" id="e4b55c27-306d-449b-8b0e-a54583570570" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board.js" afterPath="$PROJECT_DIR$/src/Board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/Cell.css" afterPath="$PROJECT_DIR$/src/css/Cell.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cell.js" afterPath="$PROJECT_DIR$/src/Cell.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ControlPanel.js" afterPath="$PROJECT_DIR$/src/ControlPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Options.js" afterPath="$PROJECT_DIR$/src/Options.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Row.js" afterPath="$PROJECT_DIR$/src/Row.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="game-of-life.iws" />
@@ -30,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.38284838">
+              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -44,57 +41,18 @@
         <entry file="file://$PROJECT_DIR$/src/Board.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cell.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cell.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cell.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46496814">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state vertical-scroll-proportion="-5.8">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cell.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/Cell.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ControlPanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-              <folding>
-                <marker date="1488248207000" expanded="true" signature="157:519" placeholder="&lt;xml/&gt;" />
-                <marker date="1488248207000" expanded="true" signature="214:383" placeholder="&lt;xml/&gt;" />
-                <marker date="1488248207000" expanded="true" signature="400:500" placeholder="&lt;xml/&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Options.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Options.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-              <folding>
-                <marker date="1488247905000" expanded="true" signature="147:870" placeholder="&lt;xml/&gt;" />
-                <marker date="1488247905000" expanded="true" signature="199:402" placeholder="&lt;xml/&gt;" />
-                <marker date="1488247905000" expanded="true" signature="419:622" placeholder="&lt;xml/&gt;" />
-                <marker date="1488247905000" expanded="true" signature="639:851" placeholder="&lt;xml/&gt;" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -114,12 +72,12 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Options.js" />
-        <option value="$PROJECT_DIR$/src/ControlPanel.js" />
         <option value="$PROJECT_DIR$/src/Row.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/css/Cell.css" />
-        <option value="$PROJECT_DIR$/src/Board.js" />
+        <option value="$PROJECT_DIR$/src/ControlPanel.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Cell.js" />
+        <option value="$PROJECT_DIR$/src/Board.js" />
       </list>
     </option>
   </component>
@@ -373,11 +331,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <marker date="1488248207000" expanded="true" signature="157:519" placeholder="&lt;xml/&gt;" />
-            <marker date="1488248207000" expanded="true" signature="214:383" placeholder="&lt;xml/&gt;" />
-            <marker date="1488248207000" expanded="true" signature="400:500" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -385,12 +339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <marker date="1488247905000" expanded="true" signature="147:870" placeholder="&lt;xml/&gt;" />
-            <marker date="1488247905000" expanded="true" signature="199:402" placeholder="&lt;xml/&gt;" />
-            <marker date="1488247905000" expanded="true" signature="419:622" placeholder="&lt;xml/&gt;" />
-            <marker date="1488247905000" expanded="true" signature="639:851" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -506,6 +455,7 @@
         <state>
           <first_editor vertical-scroll-proportion="0.67094016">
             <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -515,39 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Options.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <marker date="1488247905000" expanded="true" signature="147:870" placeholder="&lt;xml/&gt;" />
-            <marker date="1488247905000" expanded="true" signature="199:402" placeholder="&lt;xml/&gt;" />
-            <marker date="1488247905000" expanded="true" signature="419:622" placeholder="&lt;xml/&gt;" />
-            <marker date="1488247905000" expanded="true" signature="639:851" placeholder="&lt;xml/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <marker date="1488248207000" expanded="true" signature="157:519" placeholder="&lt;xml/&gt;" />
-            <marker date="1488248207000" expanded="true" signature="214:383" placeholder="&lt;xml/&gt;" />
-            <marker date="1488248207000" expanded="true" signature="400:500" placeholder="&lt;xml/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -562,8 +479,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/Cell.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.5467075">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControlPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80254775">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Options.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -571,15 +512,15 @@
     <entry file="file://$PROJECT_DIR$/src/Board.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cell.js">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46496814">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state vertical-scroll-proportion="-0.38284838">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="19" />
           <folding />
         </state>
       </provider>
