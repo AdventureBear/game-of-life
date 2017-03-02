@@ -74,7 +74,13 @@ class App extends Component {
       for (let j=0; j<arr[0].length;j++) {
         let count = 0
 
-        if (i>0) {
+        // this logic is off a little
+        // you should be able to do this with ternarys
+        // something like this
+        // let topLeft = (expression to check) ? if true return this : otherwise return this
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+
+        /*if (i>0) {
           if (j>0) {
             //diagonal up and left
             if(arr[i - 1][j - 1]){
@@ -126,7 +132,7 @@ class App extends Component {
               count +=1
             }
           }
-        }
+        }*/
 
         //Conways Rules
         //1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
