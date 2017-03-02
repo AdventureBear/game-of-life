@@ -5,13 +5,14 @@ import './css/Board.css'
 class Board extends Component {
 
   render () {
-    console.log(this.props.thisGen)
+    //console.log(this.props.thisGen)
     let fullBoard = []
     let Object_row = []
     for (var i = 0; i < this.props.numRows; i++) {
       Object_row = []
       for (var j= 0; j<this.props.numCols; j++) {
-        Object_row.push(<Cell
+        Object_row.push(
+          <Cell
           toggleCell={this.props.toggleCell}
           key={j + i*10}
           col={j}

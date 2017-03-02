@@ -2,16 +2,20 @@ import React, { Component } from 'react'
 import './css/Cell.css'
 
 class Cell extends Component {
+    handleClick=() =>{
+        console.log("cell clicked")
+        this.props.toggleCell(this.props.row, this.props.col)
+    }
     renderLive() {
         return (
-          <td  onClick={this.props.toggleCell(this.props.row,this.props.col)} className='component-cell alive'>
+          <td onClick={this.handleClick} className='component-cell alive'>
               <span></span>
           </td>
         )
     }
     renderDormant () {
         return (
-          <td  onClick={this.props.toggleCell(this.props.row,this.props.col)} className='component-cell dormant'>
+          <td onClick={this.handleClick} className='component-cell dormant'>
               <span></span>
           </td>
         )

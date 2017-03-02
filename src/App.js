@@ -3,7 +3,7 @@ import logo from './images/Game_of_life_animated_glider.gif';
 import './css/App.css';
 import ControlPanel from './ControlPanel'
 import Board from './Board'
-import Options from './Options'
+/*import Options from './Options'*/
 
 class App extends Component {
   constructor(props){
@@ -22,13 +22,11 @@ class App extends Component {
       generation: 0,
       rows: startrows,
       cols: startcols,
-      thisGen: arr
-
+      thisGen: arr,
+      running: false
     }
-    console.log(this.state.thisGen)
-
-
   }
+
   randomizeStart = () => {
     let arr = Array(this.state.rows).fill().map(()=>Array(this.state.cols).fill());
     for (let i=0; i<this.state.rows;i++) {
@@ -36,7 +34,7 @@ class App extends Component {
         arr[i][j]=((Math.random() < 0.5))
       }
     }
-    console.log(arr)
+    //console.log(arr)
     this.setState({
       thisGen: arr,
       generation: 0
@@ -50,19 +48,21 @@ class App extends Component {
       }
     }
     let gen = 0
+    this.pauseGame()
     this.setState({
         thisGen: arr,
-        generation: gen
+        generation: gen,
+        running: false
     })
   }
 
-  toggleCell = (i,j) => {
-  //console.log("toggle cell clicked", i, j)
-  //  let arr = this.state.thisGen
-  //  arr[i][j] = !arr[i][j]
-  //  this.setState({
-  //    thisGen: arr
-  //  })
+  toggleCell= (i,j)=> {
+  console.log("toggle cell clicked", i, j)
+    let arr = this.state.thisGen
+    arr[i][j] = !arr[i][j]
+    this.setState({
+      thisGen: arr
+    })
   }
 
 
@@ -128,8 +128,6 @@ class App extends Component {
           }
         }
 
-        //console.log("Checking next gen", i, j, arr[i][j], "Neighbors: ", count)
-
         //Conways Rules
         //1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
         //2. Any live cell with two or three live neighbours lives on to the next generation.
@@ -141,21 +139,22 @@ class App extends Component {
           //if < 2 or > 3 cell dies, otherwise stays alive
           if (count<2||count>3) {
             arr[i][j] = false
-            console.log("Cell: "+ i + ","+ j +  " has "+ count+ " neighbors and will die")
+            //console.log("Cell: "+ i + ","+ j +  " has "+ count+ " neighbors and will die")
           }
         }  else {
           //if cell is dead do this check (rule 4)
           //if exactly 3 cells, cell is born
           if (count===3) {
             arr[i][j] = true
-            console.log("Cell: "+ i + ","+ j +  " has "+ count+ " neighbors and will be born")
+            //console.log("Cell: "+ i + ","+ j +  " has "+ count+ " neighbors and will be born")
           }
         }
 
 
       }
     }
-      let newGen = this.state.generation + 1
+
+    let newGen = this.state.generation + 1
     this.setState({
           thisGen: arr,
           generation: newGen
@@ -165,17 +164,53 @@ class App extends Component {
 
   runGame=()=> {
     console.log("Clicked Run")
-    this.timerID = setInterval(
-      () => this.nextGeneration(),
-      1000
-    )
+    if (this.state.running===false) {
+      this.setState({ running: true })
+      this.timerID = setInterval(
+        () => this.nextGeneration(),
+        250
+      )
+    }
   }
 
   pauseGame=()=> {
-    console.log("Clicked Pause")
-    clearInterval(this.timerID)
+    if (this.state.running===true) {
+      this.setState({ running: false })
+      console.log("Clicked Pause")
+      clearInterval(this.timerID)
+    }
   }
 
+  //changeSize = (delta) => {
+  //  let i=this.state.rows + delta
+  //  let j=this.state.cols + delta
+  //  console.log("change size clicked", i,j)
+  //
+  //  if (i>10 && i<100) {
+  //    console.log("making new array")
+  //    let arr = Array(i).fill().map(()=>Array(j).fill());
+  //
+  //    for (let a=0; a<i;a++) {
+  //      for (let b=0; b<j;b++){
+  //        arr[a][b]=((Math.random() < 0.5))
+  //      }
+  //    }
+  //    console.log(arr)
+  //
+  //    this.setState=({
+  //
+  //      thisGen: arr
+  //
+  //    })
+  //
+  //    console.log(this.state.rows)
+  //  }
+  //}
+
+
+  reset = () => {
+    console.log("reset size clicked")
+  }
   render() {
 
     return (
@@ -199,7 +234,11 @@ class App extends Component {
             thisGen={this.state.thisGen}
             toggleCell={this.toggleCell}
             />
-          <Options />
+          {/*<Options
+            changeSize={this.changeSize}
+            reset={this.reset}
+            />*/}
+
         </div>
       </div>
     );

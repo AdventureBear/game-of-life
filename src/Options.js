@@ -2,15 +2,20 @@ import React, { Component } from 'react'
 import './css/Options.css'
 
 class Options extends Component {
-
+    incSize=()=>{
+        this.props.changeSize(+10)
+    }
+    decSize=()=>{
+        this.props.changeSize(-10)
+    }
     render(){
         return (
             <div className='component-options'>
                 <div id='size-options'>
                     Board Size:
-                    <button>+10</button>
-                    <button>-10</button>
-                    <button>Reset</button>
+                    <button onClick={this.incSize}>+10</button>
+                    <button onClick={this.decSize}>-10</button>
+                    <button onClick={this.props.reset}>Reset</button>
                 </div>
                 <div id='speed'>
                     Game Options:
@@ -29,6 +34,9 @@ class Options extends Component {
     }
 }
 
-
+Options.propTypes = {
+    changeSize: React.PropTypes.func,
+    reset: React.PropTypes.func
+};
 
 export default Options
